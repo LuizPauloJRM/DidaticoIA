@@ -1,3 +1,4 @@
+// App.js
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Register from "./components/Register";
@@ -5,13 +6,13 @@ import Login from "./components/Login";
 import Home from "./components/Home";
 import Favorites from "./components/Favorites";
 import Notes from "./components/Notes";
-import ProtectedRoute from "./components/ProtectedRoute"; // Importa o componente de rota protegida
-import { AuthProvider } from "./contexts/AuthContext"; // Importa o AuthProvider
-import "./App.css";
+import ProtectedRoute from "./components/ProtectedRoute"; // Componente de rota protegida
+import "./App.css"; // Importa o CSS específico do App
 
 const App = () => {
   return (
     <Routes>
+      {/* Rotas públicas */}
       <Route path="/" element={<Login />} />
       <Route path="/register" element={<Register />} />
 
